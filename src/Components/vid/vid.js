@@ -21,7 +21,7 @@ const Vid = ()=>{
              
              controls={false}
              width={'100%'}
-             height={'100vh'}
+             height={'120%'}
              playing={true}
              loop={true}
              muted={true}
