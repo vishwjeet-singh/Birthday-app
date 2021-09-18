@@ -12,7 +12,7 @@ const useStyles = makeStyles((theme) => ({
       marginRight: theme.spacing(1),
     },
   }));  
-const Vid = ()=>{
+const Vid = (props)=>{
     const classesforbutton = useStyles();
     return (
         <div className={classes.thebox}>
@@ -32,6 +32,7 @@ const Vid = ()=>{
              >
                <Button variant="contained" size="large" color="primary" className={classesforbutton.margin}
                style={{backgroundColor: '#4caf50',color:'black'}}
+               onClick={props.changed}
                >
                 Lets get started
                 </Button>
