@@ -48,7 +48,6 @@ const Contain = ()=>{
 
 
 
-            <Button color="success">kfjdsklfkl</Button>
             {page!==0?<Button
             className={classesforbutton.margin}
             variant="contained" color="success" size="medium" 
