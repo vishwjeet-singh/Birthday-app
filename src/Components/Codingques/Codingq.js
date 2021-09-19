@@ -44,7 +44,7 @@ const Coding = (props) => {
       </strong>
       <br />
       <br />
-      {reqtestcase===false?<strong>Some example test cases</strong>:<strong>Req. test cases</strong>}
+      {reqtestcase===false?<strong>Some example test cases</strong>:<strong>Req. test cases, run this one</strong>}
       <br />
       <strong>Input</strong>
       {reqtestcase===false?<p style={{marginBottom:'0px',marginTop:'0px'}}>
@@ -90,6 +90,7 @@ const Coding = (props) => {
         size="small" onClick={ans===value?props.movepage:null}>Submit</Button>
       </form>
       {value?<span >Your answer : {value}</span>:null}
+      {value?value===ans?<span style={{marginLeft:'45px',color:'green'}}>Next Page Access granted just click submit</span>:<span style={{marginLeft:'45px',color:'red'}}>Access Denied</span>:null}
       </div>
     </div>
   );
