@@ -1,25 +1,98 @@
-import React from 'react';
-import classes from './Codingq.module.css';
+import { Button ,makeStyles} from "@material-ui/core";
+import React, {  useState } from "react";
+import classes from "./Codingq.module.css";
+const useStyles = makeStyles((theme) => ({
+    margin: {
+      margin: theme.spacing(1),
+    },
+    extendedIcon: {
+      marginRight: theme.spacing(1),
+    },
+  }));
+const Coding = (props) => {
+    const classesforbutton = useStyles();
 
-const Coding = ()=>{
-    return (
-        <div className={classes.box}>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-            <br/>
-            <strong>Input</strong>
-            <p>2
-                <br/>
-            3 5 6 7
-            <br/>
-            6 7 8 1 2</p>
-            <strong>Output</strong>
-            <p>
-                3
-                <br/>
-                6
-            </p>
-        </div>
-    )
-}
+    const [value,setValue] = useState('');
+
+    const [reqtestcase , setReqtestcase] = useState(false);
+    const handleChange = (event)=>{
+        setValue(event.target.value);
+    }
+    
+
+    const ans = '34568';
+    const handlereqtestcase = ()=>{
+      if(reqtestcase===false){
+        setReqtestcase(true);
+      }
+      else
+        setReqtestcase(false);
+    }
+
+    const testcases = ['3 4 5 6 7','5 6 7 8 9','3 4 5 7 0','1 2 3 4 5','3 4 5 6 7 8'];
+  return (
+    <div className={classes.box}>
+      <p style={{marginBottom:'0px'}}>
+      The year is 2069, Chaitanya wants to celebrate by getting the gang back together. So he kidnaps DostLog using chloroform.
+        Unfortunately, he is unable to kidnap Vishwjeet as he works in a huge company on floor number x. Chaitanya is currently at the ground floor with n ml of chloroform and also needs to take down the guards using the chloroform (it takes 1 ml to take down 1 guard). Every ith floor contains i guards. However, Vishwjeet is smart, he moves up a floor after he hears Chaitanya has taken down k number of floors. Will Chaitanya make it in time to kidnap Vishwjeet?
+      </p>
+      <strong>Quick Note</strong>
+      <br />
+      <strong>
+        First, You need to code in your fav ide and Run required test cases and take the corresponding output write in the
+        input below one after other without spaces.
+      </strong>
+      <br />
+      <br />
+      {reqtestcase===false?<strong>Some example test cases</strong>:<strong>Req. test cases</strong>}
+      <br />
+      <strong>Input</strong>
+      {reqtestcase===false?<p style={{marginBottom:'0px',marginTop:'0px'}}>
+        2
+        <br />
+        3 5 6 7
+        <br />
+        6 7 8 9
+      </p>:null}
+      {reqtestcase===true?<p style={{marginBottom:'0px',marginTop:'0px'}}>
+        5
+        <br />
+        {testcases[0]}
+        <br />
+        {testcases[1]}
+        <br />
+        {testcases[2]}
+        <br />
+        {testcases[3]}
+        <br />
+        {testcases[4]}
+      </p>:null}
+      {reqtestcase===false?<strong>Output</strong>:null}
+      {reqtestcase===false?<p style={{marginBottom:'0px',marginTop:'0px'}}>
+        3
+        <br />6
+      </p>:null}
+        <Button onClick={handlereqtestcase} color="secondary">{reqtestcase===false?'Req. test cases':'Sample test cases'}</Button>
+        <br/>
+      <strong>Type your output here</strong>
+      <div style={{display:'flex',flexDirection:'row',alignItems:'center'}}>
+      <form>
+        <label>
+          <input
+            type="text"
+            value = {value}
+            onChange={handleChange}
+          />
+        </label>
+        <Button 
+        variant="contained" color="primary" className={classesforbutton.margin}
+        style={{backgroundColor: '#4caf50',color:'black'}}
+        size="small" onClick={ans===value?props.movepage:null}>Submit</Button>
+      </form>
+      {value?<span >Your answer : {value}</span>:null}
+      </div>
+    </div>
+  );
+};
 
 export default Coding;
