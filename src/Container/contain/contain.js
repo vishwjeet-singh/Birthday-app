@@ -41,7 +41,13 @@ const Contain = ()=>{
 
             {page!==0?<Nav valueofpage={page}/>:null}
 
-            {page>0 && page<4?<Coding movepage = {handlemovepage}/>:null}
+            {page===1 && page<4?<Coding movepage = {handlemovepage}/>:null}
+
+
+
+
+
+
             <Button color="success">kfjdsklfkl</Button>
             {page!==0?<Button
             className={classesforbutton.margin}
