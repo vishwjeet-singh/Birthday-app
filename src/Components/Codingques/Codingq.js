@@ -21,7 +21,7 @@ const Coding = (props) => {
     
 
     const ans = '265-1590270';
-    
+
     const handlereqtestcase = ()=>{
       if(reqtestcase===false){
         setReqtestcase(true);
@@ -61,10 +61,10 @@ const Coding = (props) => {
       {reqtestcase===false?<p style={{marginBottom:'0px',marginTop:'0px'}}>
         1
         <br />
-        3 5 6
+        7 40 4
       </p>:null}
       {reqtestcase===true?<p style={{marginBottom:'0px',marginTop:'0px'}}>
-        4
+        3
         <br />
         {testcases[0]}
         <br />
