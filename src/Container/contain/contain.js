@@ -55,7 +55,7 @@ const Contain = ()=>{
             onClick={handlepagechange} disabled={go}>Next Page</Button>:null}
             {page!==0?<Button
             variant="contained" size="medium" color="primary" className={classesforbutton.margin}
-            style={{backgroundColor: '#4caf50',color:'black',position:'absolute',bottom:'0',left:'0'}}
+            style={{backgroundColor: '#4caf50',color:'black',position:'absolute',bottom:'0',right:'9%'}}
             onClick={handleprevpage}>Prev Page</Button>:null}
         </div>
     )

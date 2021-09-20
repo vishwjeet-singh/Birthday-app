@@ -20,7 +20,8 @@ const Coding = (props) => {
     }
     
 
-    const ans = '34568';
+    const ans = '265-1590270';
+    
     const handlereqtestcase = ()=>{
       if(reqtestcase===false){
         setReqtestcase(true);
@@ -29,12 +30,14 @@ const Coding = (props) => {
         setReqtestcase(false);
     }
 
-    const testcases = ['3 4 5 6 7','5 6 7 8 9','3 4 5 7 0','1 2 3 4 5','3 4 5 6 7 8'];
+    const testcases = ['31 1300 3','6 30 3','400 89000 20','120 10000 7'];
   return (
     <div className={classes.box}>
       <p style={{marginBottom:'0px'}}>
       The year is 2069, Chaitanya wants to celebrate by getting the gang back together. So he kidnaps DostLog using chloroform.
-        Unfortunately, he is unable to kidnap Vishwjeet as he works in a huge company on floor number x. Chaitanya is currently at the ground floor with n ml of chloroform and also needs to take down the guards using the chloroform (it takes 1 ml to take down 1 guard). Every ith floor contains i guards. However, Vishwjeet is smart, he moves up a floor after he hears Chaitanya has taken down k number of floors. Will Chaitanya make it in time to kidnap Vishwjeet?
+      Unfortunately, he is unable to kidnap Vishwjeet as he works in a huge company on floor number x. Chaitanya is currently at the 0th floor with n ml of chloroform and also needs to take down the guards using the chloroform (It takes 1 ml to take down 1 guard). Every ith floor contains i number of guards. However, Vishwjeet is smart, he moves up a floor after he hears Chaitanya has taken down k number of floors. Will Chaitanya have enough chloroform to kidnap Vishwjeet?
+      <br/>
+      NOTE - If Chaitanya reaches the same floor as Vishwjeet, he has to take down all the gaurds of that floor and vishwjeet himself
       </p>
       <strong>Quick Note</strong>
       <br />
@@ -42,20 +45,26 @@ const Coding = (props) => {
         First, You need to code in your fav ide and Run required test cases and take the corresponding output write in the
         input below one after other without spaces.
       </strong>
-      <br />
-      <br />
-      {reqtestcase===false?<strong>Some example test cases</strong>:<strong>Req. test cases, run this one</strong>}
+      <p style={{marginTop:'0',marginBottom:'0'}}>
+        <strong>Input Format</strong><br/>
+        First line will be the number of test cases.
+        The second line contains x (Vishwjeet’s initial floor), n (Chaitanya’s initial chloroform amount) and k (number of floors Chaitanya takes down to prompt Vishwjeet to move 1 floor up).
+      </p>
+      <p style={{marginTop:'0',marginBottom:'0'}}>
+        <strong>Output Format</strong><br/>
+        Print the amount of chloroform remaining after used on Vishwjeet if Chaitanya will have enough chloroform for Vishwjeet. Print -1 if Chaitanya will not have enough chloroform for Vishwjeet.
+      </p>
+      {reqtestcase===false?<strong>Sample test cases</strong>:<strong>Req. test cases, run this one</strong>}
+      <Button onClick={handlereqtestcase} color="secondary">{reqtestcase===false?'Get Req. test cases':'Get Sample test case'}</Button>
       <br />
       <strong>Input</strong>
       {reqtestcase===false?<p style={{marginBottom:'0px',marginTop:'0px'}}>
-        2
+        1
         <br />
-        3 5 6 7
-        <br />
-        6 7 8 9
+        3 5 6
       </p>:null}
       {reqtestcase===true?<p style={{marginBottom:'0px',marginTop:'0px'}}>
-        5
+        4
         <br />
         {testcases[0]}
         <br />
@@ -64,16 +73,11 @@ const Coding = (props) => {
         {testcases[2]}
         <br />
         {testcases[3]}
-        <br />
-        {testcases[4]}
       </p>:null}
       {reqtestcase===false?<strong>Output</strong>:null}
       {reqtestcase===false?<p style={{marginBottom:'0px',marginTop:'0px'}}>
         3
-        <br />6
       </p>:null}
-        <Button onClick={handlereqtestcase} color="secondary">{reqtestcase===false?'Req. test cases':'Sample test cases'}</Button>
-        <br/>
       <strong>Type your output here</strong>
       <div style={{display:'flex',flexDirection:'row',alignItems:'center'}}>
       <form>
