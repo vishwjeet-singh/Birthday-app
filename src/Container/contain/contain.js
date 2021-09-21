@@ -5,6 +5,9 @@ import { makeStyles } from '@material-ui/core/styles';
 import Vid from '../../Components/vid/vid';
 import Nav from '../../Components/Navforrest/navforr';
 import Coding from '../../Components/Codingques/Codingq';
+import Funny from '../../Components/Funnyround/Funny';
+import Birvid from '../../Components/BirthdayVideo/Birthdayvideo';
+import Lastpage from '../../Components/Lastpage/Lastpage';
 const useStyles = makeStyles((theme) => ({
     margin: {
       margin: theme.spacing(1),
@@ -29,7 +32,10 @@ const Contain = ()=>{
       setGo(false);
     }
     useEffect(()=>{
+      if(page < 3)
       setGo(true);
+      else
+      setGo(false);
     },[page])
     const colorofbutton = go===false?'#4caf50':null;
     return (
@@ -39,21 +45,21 @@ const Contain = ()=>{
             {page===0?<Navigation/>:null}
             {page===0?<Vid changed={handlepagechange}/>:null}
 
-            {page!==0?<Nav valueofpage={page}/>:null}
+            {page>0 && page<4?<Nav valueofpage={page}/>:null}
 
-            {page===1 && page<4?<Coding movepage = {handlemovepage}/>:null}
+            {page===1?<Coding movepage = {handlemovepage}/>:null}
+            {page===2?<Funny movepage = {handlemovepage}/>:null}
+            {page===3?<Birvid nextpage = {handlepagechange}/>:null}
+            {page===4?<Lastpage/>:null}
 
 
 
-
-
-
-            {page!==0?<Button
+            {page>0 && page<3?<Button
             className={classesforbutton.margin}
             variant="contained" color="success" size="medium" 
             style={{backgroundColor:colorofbutton, position:'absolute',bottom:'0',right:'0'}}
             onClick={handlepagechange} disabled={go}>Next Page</Button>:null}
-            {page!==0?<Button
+            {page>0 && page<3?<Button
             variant="contained" size="medium" color="primary" className={classesforbutton.margin}
             style={{backgroundColor: '#4caf50',color:'black',position:'absolute',bottom:'0',right:'9%'}}
             onClick={handleprevpage}>Prev Page</Button>:null}

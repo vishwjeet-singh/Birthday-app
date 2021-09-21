@@ -1,0 +1,7 @@
+.thebox{
+    background: black;
+    box-sizing: border-box;
+    width: 100vw;
+    height: 91.999vh;
+    overflow: hidden;
+}

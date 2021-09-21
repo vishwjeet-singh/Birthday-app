@@ -55,7 +55,7 @@ const Coding = (props) => {
         Print the amount of chloroform remaining after used on Vishwjeet if Chaitanya will have enough chloroform for Vishwjeet. Print -1 if Chaitanya will not have enough chloroform for Vishwjeet.
       </p>
       {reqtestcase===false?<strong>Sample test cases</strong>:<strong>Req. test cases, run this one</strong>}
-      <Button onClick={handlereqtestcase} color="secondary">{reqtestcase===false?'Get Req. test cases':'Get Sample test case'}</Button>
+      <Button onClick={handlereqtestcase} size="small" color="secondary">{reqtestcase===false?'Get Req. test cases':'Get Sample test case'}</Button>
       <br />
       <strong>Input</strong>
       {reqtestcase===false?<p style={{marginBottom:'0px',marginTop:'0px'}}>
