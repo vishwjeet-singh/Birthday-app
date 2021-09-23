@@ -1,9 +1,23 @@
 import React from "react";
 import classes from "./Lastpage.module.css";
 import Typewriter from "typewriter-effect";
-const Last = (props) => {
+import Particles from 'react-particles-js';
+import ReactPlayer from 'react-player';
+const Last = () => {
   return (
+    <React.Fragment>
+      <div style={{position:'absolute',top:'0',left:'0',overflow:'hidden'}}>
+        <Particles width="100vw" height="90vh"/>
+        <ReactPlayer
+             url='https://www.youtube.com/watch?v=MU0Yp0qmYEs' 
+             controls={false}
+             playing={true}
+             style={{display:'none'}}
+             />
+      </div>
     <div className={classes.box}>
+    
+      
       <Typewriter
         onInit={(typewriter) => {
           typewriter
@@ -16,8 +30,8 @@ const Last = (props) => {
             )
             .pauseFor(500)
             .deleteAll()
-            .typeString("Happy Birthday Vikram Rathore")
-            .deleteChars(14)
+            .typeString("Happy Birthday Rowdy Rathore")
+            .deleteChars(13)
             .typeString("Prakhar Rathore")
             .typeString("<br/>-<strong>Dost Log</strong>")
             .start();
@@ -27,6 +41,7 @@ const Last = (props) => {
         }}
       />
     </div>
+    </React.Fragment>
   );
 };
 

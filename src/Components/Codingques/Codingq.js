@@ -1,6 +1,8 @@
 import { Button ,makeStyles} from "@material-ui/core";
 import React, {  useState } from "react";
 import classes from "./Codingq.module.css";
+import { fadeIn } from 'react-animations';
+import Radium,{StyleRoot} from 'radium';
 const useStyles = makeStyles((theme) => ({
     margin: {
       margin: theme.spacing(1),
@@ -9,6 +11,12 @@ const useStyles = makeStyles((theme) => ({
       marginRight: theme.spacing(1),
     },
   }));
+  const styles = {
+    fadeIn: {
+      animation: 'x 1s',
+      animationName: Radium.keyframes(fadeIn, 'fadeIn')
+    }
+  }
 const Coding = (props) => {
     const classesforbutton = useStyles();
 
@@ -32,7 +40,8 @@ const Coding = (props) => {
 
     const testcases = ['31 1300 3','6 30 3','400 89000 20','120 10000 7'];
   return (
-    <div className={classes.box}>
+    <StyleRoot>
+    <div className={classes.box} style={styles.fadeIn}>
       <p style={{marginBottom:'0px'}}>
       The year is 2069, Chaitanya wants to celebrate by getting the gang back together. So he kidnaps DostLog using chloroform.
       Unfortunately, he is unable to kidnap Vishwjeet as he works in a huge company on floor number x. Chaitanya is currently at the 0th floor with n ml of chloroform and also needs to take down the guards using the chloroform (It takes 1 ml to take down 1 guard). Every ith floor contains i number of guards. However, Vishwjeet is smart, he moves up a floor after he hears Chaitanya has taken down k number of floors. Will Chaitanya have enough chloroform to kidnap Vishwjeet?
@@ -97,6 +106,7 @@ const Coding = (props) => {
       {value?value===ans?<span style={{marginLeft:'45px',color:'green'}}>Next Page Access granted just click submit</span>:<span style={{marginLeft:'45px',color:'red'}}>Access Denied</span>:null}
       </div>
     </div>
+    </StyleRoot>
   );
 };
 

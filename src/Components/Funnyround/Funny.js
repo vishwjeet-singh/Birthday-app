@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import cclasses from './Funny.module.css'
 import { withStyles, makeStyles } from "@material-ui/core/styles";
 import Table from "@material-ui/core/Table";
 import TableBody from "@material-ui/core/TableBody";
@@ -8,6 +9,8 @@ import TableHead from "@material-ui/core/TableHead";
 import TableRow from "@material-ui/core/TableRow";
 import Paper from "@material-ui/core/Paper";
 import { Button} from "@material-ui/core";
+import { zoomIn } from 'react-animations';
+import Radium,{StyleRoot} from 'radium';
 
 const StyledTableCell = withStyles((theme) => ({
   head: {
@@ -32,13 +35,13 @@ function createData(name, calories) {
 }
 
 const rows = [
-  createData("Arnab", "madmax"),
-  createData("Raghav", "Telling stories about the lockdown"),
-  createData("Sankalp", "sank"),
-  createData("Gaurav", "gauv"),
-  createData("Chaitanya", "chai"),
-  createData("Vishwjeet", "vish"),
-  createData("prakhar", "parkho"),
+  createData("1) Arnab", "a) Stays in bed scrolling female Instagram."),
+  createData("2) Raghav", "b) Worried because left his earphones in bus"),
+  createData("3) Sankalp", "c) Starts a long-ass story on how the pandemic affected him."),
+  createData("4) Gaurav", "d) Cleans the room."),
+  createData("5) Chaitanya", "e) Just goes in his room to put his stuff and then comes to A-205 asap"),
+  createData("6) Vishwjeet", "f) Doesn’t bother to talk to us."),
+  createData("7) Prakhar", "g) Binges Netflix all day"),
 ];
 
 const useStyles = makeStyles({
@@ -54,6 +57,12 @@ const useStylesbase = makeStyles((theme) => ({
       marginRight: theme.spacing(1),
     },
   }));
+  const styles = {
+    zoomIn: {
+      animation: 'x 1s',
+      animationName: Radium.keyframes(zoomIn, 'zoomIn')
+    }
+  }
 const Funny = (props) => {
   const classesforbutton = useStylesbase();
   const classes = useStyles();
@@ -63,24 +72,18 @@ const Funny = (props) => {
     setValue(event.target.value);
   }
 
-  const ans = '1a2b3c4d5e'
+  const ans = '1f2c3a4b5d6g7e';
   return (
-    <div style={{ textAlign: "center" }}>
+    <StyleRoot>
+    <div className={cclasses.box} style={styles.zoomIn}>
       <h3 >Match the Following</h3>
-      {/* Tell what the following person would be doing first when they reach
-      college
-      <pre>
-        1) Arnab a) He would be wipind his ass off.
-        <br />
-        2) Raghav b) Telling story about lockdown{" "}
-      </pre> */}
       <div style={{width:'60%',marginLeft:'20%'}}>
       <TableContainer component={Paper}>
         <Table className={classes.table} size="small" aria-label="customized table">
           <TableHead>
             <TableRow>
               <StyledTableCell>Person</StyledTableCell>
-              <StyledTableCell align="right">What he would be doing?</StyledTableCell>
+              <StyledTableCell style={{paddingLeft:'185px'}} align="left">What he would be doing?</StyledTableCell>
             </TableRow>
           </TableHead>
           <TableBody>
@@ -89,7 +92,7 @@ const Funny = (props) => {
                 <StyledTableCell component="th" scope="row">
                   {row.name}
                 </StyledTableCell>
-                <StyledTableCell align="right">{row.calories}</StyledTableCell>
+                <StyledTableCell style={{paddingLeft:'185px'}} align="left">{row.calories}</StyledTableCell>
               </StyledTableRow>
             ))}
           </TableBody>
@@ -114,6 +117,7 @@ const Funny = (props) => {
       
       {value?<p><strong>Your answer is:</strong> {value}</p>:null}
     </div>
+    </StyleRoot>
   );
 };
 

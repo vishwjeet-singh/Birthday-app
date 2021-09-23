@@ -9,4 +9,5 @@
     align-items: center;
     font-size: 60px;
     padding: 5%;
+    overflow: hidden;
 }

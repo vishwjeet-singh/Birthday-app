@@ -8,6 +8,7 @@ import Coding from '../../Components/Codingques/Codingq';
 import Funny from '../../Components/Funnyround/Funny';
 import Birvid from '../../Components/BirthdayVideo/Birthdayvideo';
 import Lastpage from '../../Components/Lastpage/Lastpage';
+import Rick from '../../Components/Rick/Rick';
 const useStyles = makeStyles((theme) => ({
     margin: {
       margin: theme.spacing(1),
@@ -32,7 +33,7 @@ const Contain = ()=>{
       setGo(false);
     }
     useEffect(()=>{
-      if(page < 3)
+      if(page < 4)
       setGo(true);
       else
       setGo(false);
@@ -45,21 +46,22 @@ const Contain = ()=>{
             {page===0?<Navigation/>:null}
             {page===0?<Vid changed={handlepagechange}/>:null}
 
-            {page>0 && page<4?<Nav valueofpage={page}/>:null}
+            {page>0 && page<5?<Nav valueofpage={page}/>:null}
 
             {page===1?<Coding movepage = {handlemovepage}/>:null}
             {page===2?<Funny movepage = {handlemovepage}/>:null}
-            {page===3?<Birvid nextpage = {handlepagechange}/>:null}
-            {page===4?<Lastpage/>:null}
+            {page===3?<Rick movepage = {handlemovepage}/>:null}
+            {page===4?<Birvid nextpage = {handlepagechange}/>:null}
+            {page===5?<Lastpage/>:null}
 
 
 
-            {page>0 && page<3?<Button
+            {page>0 && page<4?<Button
             className={classesforbutton.margin}
             variant="contained" color="success" size="medium" 
             style={{backgroundColor:colorofbutton, position:'absolute',bottom:'0',right:'0'}}
             onClick={handlepagechange} disabled={go}>Next Page</Button>:null}
-            {page>0 && page<3?<Button
+            {page>0 && page<4?<Button
             variant="contained" size="medium" color="primary" className={classesforbutton.margin}
             style={{backgroundColor: '#4caf50',color:'black',position:'absolute',bottom:'0',right:'9%'}}
             onClick={handleprevpage}>Prev Page</Button>:null}
@@ -67,3 +69,5 @@ const Contain = ()=>{
     )
 }
 export default Contain;
+//page>0 && page<4
+//add this to the buttons when app is ready for production

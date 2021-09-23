@@ -1,11 +1,20 @@
 import React from 'react';
 import ReactPlayer from 'react-player';
 import classes from './Birthdayvideo.module.css';
+import { fadeIn } from 'react-animations';
+import Radium,{StyleRoot} from 'radium';
 const Vid = (props)=>{
+    const styles = {
+        fadeIn: {
+          animation: 'x 1s',
+          animationName: Radium.keyframes(fadeIn, 'fadeIn')
+        }
+      }
     return (
-        <div className={classes.thebox}>
+        <StyleRoot>
+        <div className={classes.thebox} style={styles.fadeIn}>
             <ReactPlayer
-             url='https://youtu.be/e6mRZjFpVME' 
+             url='https://youtu.be/t0GVr2cYrfE' 
              onEnded={props.nextpage}
              controls={false}
              width={'100%'}
@@ -19,6 +28,7 @@ const Vid = (props)=>{
              </div>
             
         </div>
+        </StyleRoot>
     )
 }
 export default Vid;

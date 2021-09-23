@@ -25,7 +25,7 @@ const navigation = () => {
             .typeString('<i>funny question round</i>')
             .pauseFor(500)
             .deleteChars(20)
-            .typeString("<i>meme round</i>")
+            .typeString("<i>rick and roll game play round</i>")
             .pauseFor(500)
             .start();
         }}
