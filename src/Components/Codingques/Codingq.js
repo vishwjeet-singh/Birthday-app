@@ -73,7 +73,7 @@ const Coding = (props) => {
         7 40 4
       </p>:null}
       {reqtestcase===true?<p style={{marginBottom:'0px',marginTop:'0px'}}>
-        3
+        4
         <br />
         {testcases[0]}
         <br />
