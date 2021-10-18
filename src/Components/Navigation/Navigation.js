@@ -19,13 +19,10 @@ const navigation = () => {
             .typeString("Welcome to this new way of celebration")
             .pauseFor(100)
             .deleteAll()
-            .typeString('You have surprise at end for which you need to pass <i>coding round</i>')
+            .typeString('You have surprise at end for which you need to pass <i>Fill characters round</i>')
             .pauseFor(500)
-            .deleteChars(12)
+            .deleteChars(21)
             .typeString('<i>funny question round</i>')
-            .pauseFor(500)
-            .deleteChars(20)
-            .typeString("<i>rick and roll game play round</i>")
             .pauseFor(500)
             .start();
         }}
