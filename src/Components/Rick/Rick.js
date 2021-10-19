@@ -1,8 +1,9 @@
-import React from "react";
+import React,{useState} from "react";
 import { Button ,makeStyles} from "@material-ui/core";
 import classes from './Rick.module.css';
 import { fadeInDownBig } from 'react-animations';
 import Radium,{StyleRoot} from 'radium';
+import img from './image1.jpg'
 const useStyles = makeStyles((theme) => ({
     margin: {
       margin: theme.spacing(1),
@@ -19,9 +20,9 @@ const useStyles = makeStyles((theme) => ({
   }
 const Rick = (props) => {
     const classesforbutton = useStyles();
-
+    const [hide,sethide] = useState(false);
     const handlechange = ()=>{
-        window.open("https://youtu.be/dQw4w9WgXcQ");
+        sethide(true);
         props.movepage();
     }
   return(
@@ -33,10 +34,14 @@ const Rick = (props) => {
         which leetcode problem is in the questionnaire. Click this link and
         solve the problem to help Sankalp.
       </p>
-      <Button 
+      {(!hide)?
+      <Button
         variant="contained" color="primary" className={classesforbutton.margin}
         style={{backgroundColor: '#4caf50',color:'black'}}
-        size="medium" onClick={handlechange}>Click me</Button>
+        size="medium" onClick={handlechange}>Click me</Button>:null}
+      {hide?<div style={{width:'500px',height:'300px',display:'inline-flex',alignItems:'center',justifyContent:'center'}}>
+        <img style={{height:'100%',width:'100%',objectFit:'cover'}} src = {img} alt="cant load"/>
+      </div>:null}
 
     </div>
     </StyleRoot>

@@ -22,17 +22,12 @@ const Last = () => {
         onInit={(typewriter) => {
           typewriter
 
-            .typeString("To the person who is backbone of <strong>Dost Log</strong> and also keeps all of us engaged in some kind of talks")
+            .typeString("To the person who have this and also likes this <br> string s;cin>>s;<br>string newstring=''''; <br> for(int i=s.length()-1;i>-1;i--) <br> newstring += s[i]; <br> if(s==newstring) <br> palindrome")
             .pauseFor(100)
             .deleteAll()
-            .typeString(
-              "To the person who is obsessed with letter <strong>P</strong> like Python and other one is the person you know ...."
-            )
-            .pauseFor(500)
-            .deleteAll()
-            .typeString("Happy Birthday Rowdy Rathore")
-            .deleteChars(13)
-            .typeString("Prakhar Rathore")
+            .typeString("Happy Birthday Gaurav Sharma")
+            .deleteChars(6)
+            .typeString("Arora")
             .typeString("<br/>-<strong>Dost Log</strong>")
             .start();
         }}

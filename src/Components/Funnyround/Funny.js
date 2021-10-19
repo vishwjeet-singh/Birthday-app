@@ -72,7 +72,7 @@ const Funny = (props) => {
     setValue(event.target.value);
   }
 
-  const ans = '1f2c3a4b5d6g7e';
+  const ans = 'vishwjeet';
   return (
     <StyleRoot>
     <div className={cclasses.box} style={styles.zoomIn}>
