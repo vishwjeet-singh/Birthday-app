@@ -4,10 +4,8 @@ import Button from '@material-ui/core/Button';
 import { makeStyles } from '@material-ui/core/styles';
 import Vid from '../../Components/vid/vid';
 import Nav from '../../Components/Navforrest/navforr';
-import Funny from '../../Components/Funnyround/Funny';
 import Birvid from '../../Components/BirthdayVideo/Birthdayvideo';
 import Lastpage from '../../Components/Lastpage/Lastpage';
-import Rick from '../../Components/Rick/Rick';
 import Fillinblank from '../../Components/Gauravspecific component/fillinblank/fillinblank';
 const useStyles = makeStyles((theme) => ({
     margin: {
@@ -46,22 +44,20 @@ const Contain = ()=>{
             {page===0?<Navigation/>:null}
             {page===0?<Vid changed={handlepagechange}/>:null}
 
-            {page>0 && page<5?<Nav valueofpage={page}/>:null}
+            {page>0 && page<3?<Nav valueofpage={page}/>:null}
 
             {page===1?<Fillinblank movepage = {handlemovepage}/>:null}
-            {page===2?<Funny movepage = {handlemovepage}/>:null}
-            {page===3?<Rick movepage = {handlemovepage}/>:null}
-            {page===4?<Birvid nextpage = {handlepagechange}/>:null}
-            {page===5?<Lastpage/>:null}
+            {page===2?<Birvid nextpage = {handlepagechange}/>:null}
+            {page===3?<Lastpage/>:null}
 
 
 
-            {page>0 && page<4?<Button
+            {page>0 && page<2?<Button
             className={classesforbutton.margin}
             variant="contained" color="success" size="medium" 
             style={{backgroundColor:colorofbutton, position:'absolute',bottom:'0',right:'0'}}
             onClick={handlepagechange} disabled={go}>Next Page</Button>:null}
-            {page>0 && page<4?<Button
+            {page>0 && page<2?<Button
             variant="contained" size="medium" color="primary" className={classesforbutton.margin}
             style={{backgroundColor: '#4caf50',color:'black',position:'absolute',bottom:'0',right:'9%'}}
             onClick={handleprevpage}>Prev Page</Button>:null}

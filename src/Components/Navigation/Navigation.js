@@ -15,17 +15,11 @@ const navigation = () => {
       <Typewriter
         onInit={(typewriter) => {
           typewriter
-
             .typeString("Welcome to this new way of celebration")
             .pauseFor(100)
             .deleteAll()
             .typeString('You have surprise at end for which you need to pass <i>Fill characters round</i>')
             .pauseFor(500)
-            .deleteChars(21)
-            .typeString('<i>funny question round</i>')
-            .pauseFor(500)
-            .deleteChars(20)
-            .typeString('<i>problem solving round</i>')
             .start();
         }}
         options={{

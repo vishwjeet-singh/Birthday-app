@@ -17,7 +17,7 @@ const Vid = (props)=>{
     return (
         <div className={classes.thebox}>
             <ReactPlayer
-             url='https://youtu.be/_MNvO7Z26YY' 
+             url='https://youtu.be/3gbT24EYI_M' 
              
              controls={false}
              width={'100%'}
