@@ -9,7 +9,7 @@ import Radium,{StyleRoot} from 'radium';
         }
       }
 const navigation = (props) => {
-    const somevalues = ["Welcome to Fill Characters round", "Welcome to Funny Question Round" ,"Welcome to the rick and roll play game round", "Congo!! Gaurav you made it, enjoy this video made solely for you"]
+    const somevalues = ["Welcome to Fill Characters round", "Welcome to Funny Question Round" ,"Welcome to solving problem round", "Congo!! Gaurav you made it, enjoy this video made solely for you"]
   return (
     <StyleRoot>
     <div className={classes.topnav} style={styles.fadeIn}>

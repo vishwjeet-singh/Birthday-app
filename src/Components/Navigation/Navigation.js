@@ -24,6 +24,8 @@ const navigation = () => {
             .deleteChars(21)
             .typeString('<i>funny question round</i>')
             .pauseFor(500)
+            .deleteChars(20)
+            .typeString('<i>problem solving round</i>')
             .start();
         }}
         options={{
