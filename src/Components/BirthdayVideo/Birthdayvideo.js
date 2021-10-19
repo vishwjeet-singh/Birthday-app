@@ -14,7 +14,7 @@ const Vid = (props)=>{
         <StyleRoot>
         <div className={classes.thebox} style={styles.fadeIn}>
             <ReactPlayer
-             url='https://youtu.be/t0GVr2cYrfE' 
+             url='https://youtu.be/6My_EoeZXh8' 
              onEnded={props.nextpage}
              controls={false}
              width={'100%'}
