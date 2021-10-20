@@ -2,7 +2,7 @@ import React from "react";
 import classes from "../Navigation/Navigation.module.css";
 import Typewriter from "typewriter-effect";
 
-const navigation = () => {
+const navigation = (props) => {
   return (
     <div className={classes.topnav}>
       {/* <Typewriter
@@ -26,6 +26,7 @@ const navigation = () => {
             .pauseFor(500)
             .deleteChars(20)
             .typeString('<i>problem solving round</i>')
+            .callFunction(()=>{props.changevisible()})
             .start();
         }}
         options={{

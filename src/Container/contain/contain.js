@@ -22,6 +22,7 @@ const Contain = ()=>{
     const classesforbutton = useStyles();
     const [go,setGo] = useState(true);
     const [page,setPage] = useState(0);
+    const [visiblegetstarted,setvisiblegetstarted] = useState(false);
     const handlepagechange = ()=>{
         setPage(page+1);
     }
@@ -39,12 +40,19 @@ const Contain = ()=>{
       setGo(false);
     },[page])
     const colorofbutton = go===false?'#4caf50':null;
+
+    const handlevisiblegetstarted = ()=>{
+      setvisiblegetstarted(true);
+    }
+
+
+    
     return (
        
         <div>
             
-            {page===0?<Navigation/>:null}
-            {page===0?<Vid changed={handlepagechange}/>:null}
+            {page===0?<Navigation changevisible={handlevisiblegetstarted}/>:null}
+            {page===0?<Vid changed={handlepagechange} visible = {visiblegetstarted}/>:null}
 
             {page>0 && page<5?<Nav valueofpage={page}/>:null}
 

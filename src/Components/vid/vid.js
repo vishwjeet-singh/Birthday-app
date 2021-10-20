@@ -38,7 +38,7 @@ const Vid = (props)=>{
              muted={true}
              style={{left: 0}}
              /> */}
-             <div
+             {props.visible?<div
              style={{position: 'absolute',bottom:0, right: 0,minWidth: 200}}
              >
                <Button variant="contained" size="large" color="primary" className={classesforbutton.margin}
@@ -47,7 +47,7 @@ const Vid = (props)=>{
                >
                 Lets get started
                 </Button>
-             </div>
+             </div>:null}
             
         </div>
     )
