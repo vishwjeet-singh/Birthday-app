@@ -36,12 +36,12 @@ function createData(name, calories) {
 
 const rows = [
   createData("1) Arnab", "a) Starts a business selling weapons."),
-  createData("2) Raghav", "b) Plans a trip during all of this."),
+  createData("2) Raghav", "b) Manages to sneak out of hostel to get hot choclate."),
   createData("3) Sankalp", "c) Long-ass story about how he once faced a zombie apocalypse in 6th grade."),
   createData("4) Gaurav", "d) Watches survival courses on youtube and pastes them on CV."),
   createData("5) Chaitanya", "e) Doesn’t care. Still goes to mess twice for one meal."),
   createData("6) Vishwjeet", "f) Gives up and joins zombies."),
-  createData("7) Prakhar", "g) Dies first."),
+  createData("7) Prakhar", "g) Dies while talking on phone."),
 ];
 
 const useStyles = makeStyles({
