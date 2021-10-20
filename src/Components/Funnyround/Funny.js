@@ -35,13 +35,13 @@ function createData(name, calories) {
 }
 
 const rows = [
-  createData("1) Arnab", "a) Stays in bed scrolling female Instagram."),
-  createData("2) Raghav", "b) Worried because left his earphones in bus"),
-  createData("3) Sankalp", "c) Starts a long-ass story on how the pandemic affected him."),
-  createData("4) Gaurav", "d) Cleans the room."),
-  createData("5) Chaitanya", "e) Just goes in his room to put his stuff and then comes to A-205 asap"),
-  createData("6) Vishwjeet", "f) Doesn’t bother to talk to us."),
-  createData("7) Prakhar", "g) Binges Netflix all day"),
+  createData("1) Arnab", "a) Starts a business selling weapons."),
+  createData("2) Raghav", "b) Plans a trip during all of this."),
+  createData("3) Sankalp", "c) Long-ass story about how he once faced a zombie apocalypse in 6th grade."),
+  createData("4) Gaurav", "d) Watches survival courses on youtube and pastes them on CV."),
+  createData("5) Chaitanya", "e) Doesn’t care. Still goes to mess twice for one meal."),
+  createData("6) Vishwjeet", "f) Gives up and joins zombies."),
+  createData("7) Prakhar", "g) Dies first."),
 ];
 
 const useStyles = makeStyles({
@@ -72,12 +72,12 @@ const Funny = (props) => {
     setValue(event.target.value);
   }
 
-  const ans = 'vishwjeet';
+  const ans = '1g2c3d4e5f6b7a';
   return (
     <StyleRoot>
     <div className={cclasses.box} style={styles.zoomIn}>
-      <h3 >Match the Following</h3>
-      <div style={{width:'60%',marginLeft:'20%'}}>
+      <h3 >Match the name of the person with the first thing they’ll do in a zombie apocalypse (we are all in college).</h3>
+      <div style={{width:'65%',marginLeft:'20%'}}>
       <TableContainer component={Paper}>
         <Table className={classes.table} size="small" aria-label="customized table">
           <TableHead>

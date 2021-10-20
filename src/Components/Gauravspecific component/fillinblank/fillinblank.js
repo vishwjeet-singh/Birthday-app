@@ -26,12 +26,28 @@ const Fillinblank = (props) => {
     }
     
 
-    const ans = 'vishwjeet';
+    const ans = 'prakharvishwjeetraghavchaitanyasankalparnabsuryanshu';
   return (
     <StyleRoot>
     <div className={classes.box} style={styles.fadeIn}>
+      <p style={{fontSize:'18px'}}><strong>Story Puzzle</strong></p>
       <p style={{marginBottom:'0px'}}>
-      Lorem ipsum __________, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim __________ ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit _____________ esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in __________ culpa qui officia deserunt mollit anim id est laborum.
+      Covid has ended, colleges have opened. Gaurav returns to his room after almost 2 years. Life resumes as usual in campus. However, normal for Gaurav also means he starts losing his belongings like keys, earphones and the banana you get with your breakfast, but something seems off. He notices that most of the items lost are either food items or daily accessories such as phone charger and deodorant. So Gaurav gathers DostLog and starts questioning them.
+      <strong>You must guess which DL member replied with what story.</strong> You must also write the name of the culprit in the final blank below, based on the different stories you hear.<br/>
+      (_______) – No bro, but I did see Vishwjeet going into your room the other day. Ok, let's go ask Vishwjeet and look for your stuff!
+      <br/>
+      (_______) – No, although I did go to your room to get the iron. Abhay was playing PUBG, so I think he might have seen me taking the iron.
+      <br/>
+      (_______) – No man, but you know what, I also had really good Sony earphones once. We were traveling in the car once and my mom asked for those. Then I don't know where she kept them and they also got misplaced. But I did see Arnab in the corridor outside your room, pacing up and down.
+      <br/>
+      (_______) – Huh? I didn’t do anything. I did come to your room though, to get the broom. Later I cleaned the room and had breakfast with Suryanshu who surprisingly woke up early.
+      <br/>
+      (_______) – I haven't seen your stuff, sorry man. Just because of such things I don't buy expensive things. I had my Samsung earphones for 3 years and they worked completely fine.
+      <br/>
+      (_______) – Hey bro, you're looking really sexy today! I was waiting for the bathroom to be free. They said some guy named Suryanshu came early in the morning and made a huge smelly dump in our washroom
+      <br/>
+      Culprit – (_______)
+      <br/>
       </p>
       
       <strong>Type your answer here one after other as to be filled in the blanks, without spaces</strong>

@@ -22,12 +22,12 @@ const Last = () => {
         onInit={(typewriter) => {
           typewriter
 
-            .typeString("To the person who have this and also likes this <br> string s;cin>>s;<br>string newstring=''''; <br> for(int i=s.length()-1;i>-1;i--) <br> newstring += s[i]; <br> if(s==newstring) <br> palindrome")
+            .typeString("To the person who have this and also likes this <br> string s;cin>>s;<br>string newstring=''''; <br> for(int i=s.length()-1;i>=0;i--) <br> newstring += s[i]; <br> if(s==newstring) <br> Kanak")
             .pauseFor(100)
             .deleteAll()
-            .typeString("Happy Birthday Gaurav Sharma")
-            .deleteChars(6)
-            .typeString("Arora")
+            .typeString("Happy Birthday Kanak Arora")
+            .deleteChars(11)
+            .typeString("Gaurav Arora")
             .typeString("<br/>-<strong>Dost Log</strong>")
             .start();
         }}
