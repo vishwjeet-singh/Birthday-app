@@ -22,7 +22,7 @@ const Last = () => {
         }
         />
         <ReactPlayer
-             url='https://www.youtube.com/watch?v=WM4qpxQ71KQ' 
+             url='https://www.youtube.com/watch?v=MU0Yp0qmYEs' 
              controls={false}
              playing={true}
              style={{display:'none'}}
