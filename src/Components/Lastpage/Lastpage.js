@@ -18,22 +18,7 @@ const Last = () => {
               enable: true,
               value_area: 1500
             }
-          },
-          interactivity: {
-            detect_on: "canvas",
-            events: {
-              onhover: {
-                enable: true,
-                mode: 'grab'
-              },
-              onclick: {
-                enable: true,
-                mode: "push"
-              },
-              resize: true
-            }}
-        }
-      }
+              }}}
         }
         />
         <ReactPlayer
