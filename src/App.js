@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import Contain from '../src/Container/contain/contain'
+import LastPage from './Components/Lastpage/Lastpage';
 class App extends Component {
   render(){
     return (
       <div className="App">
-        <Contain/>
+        <LastPage/>
       </div>
     );
   }

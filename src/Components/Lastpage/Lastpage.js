@@ -7,7 +7,35 @@ const Last = () => {
   return (
     <React.Fragment>
       <div style={{position:'absolute',top:'0',left:'0',overflow:'hidden'}}>
-        <Particles width="100vw" height="90vh"/>
+        <Particles 
+        width="100vw" 
+        height="90vh"
+        params={{
+          particles:{
+          number: {
+            value: 400,
+            density: {
+              enable: true,
+              value_area: 1500
+            }
+          },
+          interactivity: {
+            detect_on: "canvas",
+            events: {
+              onhover: {
+                enable: true,
+                mode: 'grab'
+              },
+              onclick: {
+                enable: true,
+                mode: "push"
+              },
+              resize: true
+            }}
+        }
+      }
+        }
+        />
         <ReactPlayer
              url='https://www.youtube.com/watch?v=MU0Yp0qmYEs' 
              controls={false}
@@ -22,13 +50,11 @@ const Last = () => {
         onInit={(typewriter) => {
           typewriter
 
-            .typeString("To the person who have this and also likes this <br> string s;cin>>s;<br>string newstring=''''; <br> for(int i=s.length()-1;i>=0;i--) <br> newstring += s[i]; <br> if(s==newstring) <br> Kanak")
+            .typeString("To the person whom I met recently and gave me chill vibes...")
             .pauseFor(100)
             .deleteAll()
-            .typeString("Happy Birthday Gaurav Sharma")
-            .deleteChars(6)
-            .typeString("Arora")
-            .typeString("<br/>-<strong>Dost Log</strong>")
+            .typeString("A Very Happpppppy Birthday Apoorva")
+            .typeString("<br/>-<strong>Vishwjeet Singh</strong>")
             .start();
         }}
         options={{
